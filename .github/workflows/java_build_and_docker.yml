@@ -36,5 +36,5 @@ jobs:
       with:
         context: .
         push: true
-        tags: NoahKem/java-workflow:latest
+        tags: noahkem/java-workflow:latest
 
