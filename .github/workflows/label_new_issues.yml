@@ -9,9 +9,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Label new issue as "To Do"
+      - name: Check GitHub context
+        run: echo "Issue title: ${{ github.event.issue.title }}"
+
+      - name: Add "To Do" label
         uses: actions-ecosystem/action-add-labels@v1
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          labels: "To Do"
+          labels: |
+            To Do
 
